@@ -4,6 +4,9 @@ AcademiaRails::Application.routes.draw do
   get "content/gold"
   get "content/silver"
   get "content/platinum"
+
+  get 'about' => 'pages#about', as: :about
+  get 'contact' => 'pages#contact', as: :contact
   # authenticated :user do
   #   root :to => 'home#index'
   # end

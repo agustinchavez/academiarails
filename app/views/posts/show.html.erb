@@ -1,25 +1,15 @@
 <% provide(:page_title, @post.title) %>
-<p id="notice"><%= notice %></p>
+<% provide(:author, "active") %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div>
+  <%= link_to 'Editar',  edit_authors_post_path(@post), class: 'btn btn-sm btn-warning' %>
+  <%= link_to 'Remover',  authors_post_path(@post), method: :delete, data:{ confirm: 'Estas seguro?'}, class: 'btn btn-sm btn-danger' %>
+</div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-
-<p>
-  <strong>Slug:</strong>
-  <%= @post.slug %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
+    <h1><%= @post.title %></h1>
+    <p> <%= @post.display_day_published %></p>
+    <%= @post.body.html_safe %>
+  </div>
+</div>
