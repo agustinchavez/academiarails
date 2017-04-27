@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+class CourseController < ActionController::Base
   protect_from_forgery
 
   rescue_from CanCan::AccessDenied do |exception|
@@ -19,5 +19,5 @@ class ApplicationController < ActionController::Base
         root_path
     end
   end
-  
+
 end
