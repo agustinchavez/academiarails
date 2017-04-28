@@ -1,4 +1,5 @@
 AcademiaRails::Application.routes.draw do
+  devise_for :authors
   resources :posts
   mount StripeEvent::Engine => '/stripe'
   get "content/gold"
@@ -11,16 +12,16 @@ AcademiaRails::Application.routes.draw do
   # end
   root :to => "course/posts#index"
 
-  namespace :author do
+  namespace :authors do
     resources :posts
   end
 
-   scope module: 'course' do
-    get 'about' => 'pages#about', as: :about
-    get 'contact' => 'pages#contact', as: :contact
-    get 'posts' => 'posts#index', as: :posts
-    get 'posts/:id' => 'posts#show', as: :post
-  end
+  #  scope module: 'course' do
+  #   get 'about' => 'pages#about', as: :about
+  #   get 'contact' => 'pages#contact', as: :contact
+  #   get 'posts' => 'posts#index', as: :posts
+  #   get 'posts/:id' => 'posts#show', as: :post
+  # end
 
 
   devise_for :users, :controllers => { :registrations => 'registrations' }

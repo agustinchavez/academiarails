@@ -1,3 +1,3 @@
-class AuthorController < ActionController::Base
-  protect_from_forgery
+class AuthorController < ApplicationController
+  before_action :authenticate_author!
 end
