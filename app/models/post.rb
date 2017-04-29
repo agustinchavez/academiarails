@@ -1,16 +1,31 @@
 class Post < ActiveRecord::Base
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 
   belongs_to :author
 
-  scope :most_recent, -> {order(id: :desc)}
+  scope :most_recent, -> {order(published_at: :desc)}
+  scope :published, -> {where(published: true)}
 
   def should_generate_new_friendly_id?
     title_changed?
   end
 
   def display_day_published
-    "Published #{created_at.strftime('%-b %-d, %Y')}"
+    if published_at.present?
+      "Published #{published_at.strftime('%-b %-d, %Y')}"
+    else
+      "Not pub yet."
+    end
   end
+
+  def publish
+    update(published: true, published_at: Time.now)
+  end
+
+  def unpublish
+    update(published: false, published_at: nil)
+  end
+
 end
