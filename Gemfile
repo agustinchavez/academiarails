@@ -41,3 +41,5 @@ gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 gem 'annotate'
 
 gem 'turbolinks'
+
+gem 'will_paginate', '~> 3.1.0'

@@ -1,16 +1,11 @@
 <% provide(:page_title, "All Posts") %>
-<% provide(:author, "active") %>
+<% provide(:blog_active, "active") %>
 
 <div class="row">
-  <div>
-    <%= link_to 'New post', new_authors_post_path, class: 'btn btn-primary btn-lg' %>
-  </div>
-  <br>
-  <table class="table table-striped">
-    <tr>
-      <th colspan="5">Titulo</th>
-    </tr>
-    <%= render @posts %>
-  </table>
 
+  <%= render @posts %>
+</div>
+
+<div class="digg_pagination">
+  <%= will_paginate @posts, :container => false %>
 </div>
