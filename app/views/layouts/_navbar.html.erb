@@ -29,9 +29,9 @@
     <a class="navbar-brand" href='/'>
       Academia<span class="light">Rails</span>
     </a>
-    <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+    <!-- <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
 &#9776;
-</button>
+</button> -->
 <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
   <li class="nav-item">
     <%= link_to 'Posts', posts_path, class: "nav-link #{yield(:blog_active)}" %>
@@ -46,10 +46,13 @@
     <li class="nav-item">
       <%= link_to 'mis posts', authors_posts_path, class: "nav-link #{yield(:author)}" %>
     </li>
-
     <li class="nav-item">
       <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link" %>
     </li>
+  <% else %>
+  <li class="list-group-item">
+            <%= link_to 'sign up', new_user_registration_path, method: :new, class: "nav-link #{yield(:user)}" %>
+          </li>
   <% end %>
 </ul>
 </div>

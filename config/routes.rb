@@ -5,6 +5,8 @@ AcademiaRails::Application.routes.draw do
   get "content/silver"
   get "content/platinum"
 
+  get 'user' => "registrations#new", as: :new
+
 
   # authenticated :user do
   #   root :to => 'home#index'
