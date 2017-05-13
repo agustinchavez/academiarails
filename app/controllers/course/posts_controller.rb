@@ -1,6 +1,6 @@
 module Course
   class PostsController < CourseController
-
+    # before_filter :authenticate_user!
     # GET /posts
     # GET /posts.json
     def index

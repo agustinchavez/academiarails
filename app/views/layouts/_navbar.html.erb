@@ -50,8 +50,11 @@
       <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link" %>
     </li>
   <% else %>
-  <li class="list-group-item">
-            <%= link_to 'sign up', new_user_registration_path, method: :new, class: "nav-link #{yield(:user)}" %>
+          <li class="list-group-item">
+            <%= link_to 'Login', new_user_session_path %>
+          </li>
+          <li class="list-group-item">
+            <%= link_to 'Sign Up', new_user_registration_path(:plan => 'platinum'), :class => 'btn btn-primary' %>
           </li>
   <% end %>
 </ul>
