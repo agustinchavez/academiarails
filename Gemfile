@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 gem 'rails'
 # gem 'pg'
-gem 'sqlite3'
+gem 'sqlite3', :group => [:development, :test]
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
@@ -45,3 +45,5 @@ gem 'turbolinks'
 
 gem 'will_paginate', '~> 3.1.0'
 gem 'acts-as-taggable-on', '~> 4.0'
+
+gem "pg", :group => :production

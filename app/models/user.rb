@@ -4,12 +4,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :name, :email, :password, :password_confirmation,
-    :remember_me, :stripe_token, :coupon, :last_4_digits, :customer_id
-  attr_accessor :stripe_token, :coupon
+  attr_accessible :name, :email, :password, :password_confirmation
+    # :remember_me, :stripe_token, :coupon, :last_4_digits, :customer_id
+  # attr_accessor :stripe_token, :coupon
 
-  before_save :update_stripe
-  before_destroy :cancel_subscription
+  # before_save :update_stripe
+  # before_destroy :cancel_subscription
 
   def update_plan(role)
     self.role_ids = []
