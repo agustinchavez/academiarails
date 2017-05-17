@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 gem 'rails'
-# gem 'pg'
 gem 'sqlite3', :group => [:development, :test]
 group :assets do
   gem 'sass-rails'
