@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby "2.2.2"
 gem 'rails'
 
 group :assets do
@@ -51,6 +52,6 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-group :production do
-  gem 'pg'
-end
+# group :production do
+#   gem 'pg'
+# end
