@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem "rspec-rails", :group => [:development, :test]
 gem "database_cleaner", :group => :test
 gem "email_spec", :group => :test
-gem "cucumber-rails", :group => :test, :require => false
+gem "cucumber-rails", :group => :test
 gem "launchy", :group => :test
 gem "capybara", :group => :test
 gem "factory_girl_rails", :group => [:development, :test]
