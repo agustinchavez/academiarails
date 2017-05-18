@@ -15,7 +15,7 @@ gem "cucumber-rails", :group => :test
 gem "launchy", :group => :test
 gem "capybara", :group => :test
 gem "factory_girl_rails", :group => [:development, :test]
-gem "teaspoon", :group => [:development, :test]
+# gem "teaspoon", :group => [:development, :test]
 gem "bootstrap-sass"
 gem "devise"
 gem "cancan"
