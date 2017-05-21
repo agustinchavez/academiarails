@@ -2,14 +2,18 @@
 <% provide(:author, "active") %>
 
 <div>
-  <%= link_to 'Editar',  edit_authors_post_path(@post), class: 'btn btn-sm btn-warning' %>
-  <%= link_to 'Remover',  authors_post_path(@post), method: :delete, data:{ confirm: 'Estas seguro?'}, class: 'btn btn-sm btn-danger' %>
+  <% if author_signed_in? %>
+    <%= link_to 'Editar',  edit_authors_post_path(@post), class: 'btn btn-sm btn-warning' %>
+    <%= link_to 'Remover',  authors_post_path(@post), method: :delete, data:{ confirm: 'Estas seguro?'}, class: 'btn btn-sm btn-danger' %>
+  <% end %>
 </div>
 
 <div class="row">
   <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
     <h1><%= @post.title %></h1>
-    <p> <%= @post.display_day_published %></p>
+    <% if author_signed_in? %>
+      <p> <%= @post.display_day_published %></p>
+    <% end %>
     <%= @post.body.html_safe %>
   </div>
 </div>
