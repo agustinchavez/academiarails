@@ -7,7 +7,7 @@ class ActsAsTaggableOnMigration < ActiveRecord::Migration
 
     create_table :taggings do |t|
       t.references :tag
-
+      t.references :post, index: true, foreign_key: true
       # You should make sure that the column created is
       # long enough to store the required class names.
       t.references :taggable, polymorphic: true

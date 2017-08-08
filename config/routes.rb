@@ -19,6 +19,7 @@ AcademiaRails::Application.routes.draw do
       put 'unpublish' => 'posts#unpublish', on: :member
     end
   end
+  resources :tags
 
    scope module: 'course' do
     get 'about' => 'pages#about', as: :about
