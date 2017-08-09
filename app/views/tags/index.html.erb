@@ -1,4 +1,12 @@
-<div class="row">
+<h1>All Tags</h1>
 
-  <%= render @tags %>
-</div>
+<ul id="tags">
+  <% @tags.each do |tag| %>
+    <li>
+      <%= link_to tag.name, tag_path(tag) %>
+    </li>
+    <% if author_signed_in? %>
+         <%= link_to "delete", tag_path(tag), method: :delete, data: {confirm: "Really delete the tag?"} %>
+    <% end %>
+  <% end %>
+</ul>

@@ -11,7 +11,7 @@ AcademiaRails::Application.routes.draw do
   # authenticated :user do
   #   root :to => 'home#index'
   # end
-  root :to => "course/posts#index"
+  root :to => "tags#index"
 
   namespace :authors do
     resources :posts do
