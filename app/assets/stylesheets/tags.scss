@@ -24,7 +24,14 @@
 }
 
 .tagImage {
-  max-width: 10%;
   height: auto;
-  float:right;
+  width: 15.625em;
+}
+
+#tagImageDiv{
+  height: 9.375em;
+  width: 15.625em;
+  overflow: hidden;
+  float: right;
+  margin-bottom: 5em;
 }
