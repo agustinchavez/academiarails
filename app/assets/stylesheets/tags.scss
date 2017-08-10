@@ -3,11 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #secciones_tags {
-
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+  font-size: 4em;
 }
 
 #tagSection{
-  padding: 2em;
+  padding: 1em;
   border: .25em solid black;
   margin: auto;
   margin-top:1.5em;
@@ -23,6 +25,12 @@
   font-size: 2em;
 }
 
+#tagSection p {
+  margin-top: 2em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
+
 .tagImage {
   height: auto;
   width: 15.625em;
@@ -34,4 +42,6 @@
   overflow: hidden;
   float: right;
   margin-bottom: 5em;
+  border: .25em solid black;
+  border-radius: 10%;
 }

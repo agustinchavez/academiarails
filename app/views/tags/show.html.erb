@@ -1,10 +1,12 @@
-<h1><%= @tag.name %></h1>
+<h1 id="secciones_tags"><%= @tag.name %> lecciones</h1>
 
-<ul>
+<div class="container">
+  <div class="row">
   <% @tag.posts.each do |post| %>
-    <li>
+    <div class="col-md-8" id="tagSection">
       <%= link_to post.title, post_path(post) %>
       <p class="card-text"><%= truncate(post.description, length: 130) %></p>
-    </li>
+    </div>
   <% end %>
-</ul>
+  </div>
+</div>
