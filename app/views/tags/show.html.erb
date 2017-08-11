@@ -5,7 +5,7 @@
   <% @tag.posts.each do |post| %>
     <div class="col-md-8" id="tagSection">
       <%= link_to post.title, post_path(post) %>
-      <p class="card-text"><%= truncate(post.description, length: 130) %></p>
+      <p class="card-text-lesson"><%= truncate(post.description, length: 130) %></p>
     </div>
   <% end %>
   </div>
