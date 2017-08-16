@@ -1,0 +1,23 @@
+.aboutPic {
+  background-image:url("http://res.cloudinary.com/academiarails/image/upload/v1495378575/navigationBootstrap_oemw9k.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  height: 550px;
+}
+
+.container {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+#contenido {
+  padding-top: 7%;
+}
+
+#aboutBannerTitle {
+  color:white;
+  text-align: center;
+  padding-top: 30%;
+}
