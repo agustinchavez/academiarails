@@ -5,8 +5,16 @@
   position: relative;
   height: 550px;
 }
+#aboutBannerTitle {
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
 
-.container {
+.about {
   width: auto;
   margin: 0;
   padding: 0;
@@ -14,10 +22,16 @@
 
 #contenido {
   padding-top: 7%;
+  padding-bottom: 6%;
 }
 
 #aboutBannerTitle {
   color:white;
   text-align: center;
   padding-top: 30%;
+}
+
+#contenido p {
+  padding: .75%;
+
 }
