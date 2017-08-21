@@ -1,9 +1,35 @@
 <% provide(:contact_active, "active") %>
 <div class="container">
   <div class="row">
-    <div class="col-8">
+    <div class="col col-md-6">
+      <h3>Hablanos sobre ti.</h3>
+      <p>Si usted está buscando para cambiar su carrera completamente o simplemente aprender algunas habilidades nuevas, nuestro curso puede ayudarle a alcanzar sus metas.</p>
+      <h4>Que pasa cuando nos contactas?</h4>
+      <p>Normalmente alguien aqui en AcademiaRails respondera a sus preguntas dentro de 24 horas.</p>
+      <p>AcademiaRails es mucho mas que solo un curso en donde aprenderas algunas habilidades nuevas. Sabemos lo que siente estar al borde de lo desconocido. Por eso estaremos contigo apoyandote, y enseñándote opciones y herramientas para que puedas pasar las partes difíciles y pasar a las partes divertidas.</p>
     </div>
-    <div class="col-4">
+    <div class="col-6 col-md-4">
+      <h1>Manda un menasaje</h1>
+        <%= flash[:notice] %>
+        <%= form_tag("/pages/gracias") do %>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= label_tag :name, "Name" %>
+              <%= text_field_tag :name, nil, class: "form-control", placeholder: "Nombre" %>
+            </div>
+            <div class="form-group">
+              <%= label_tag :email, "Email Address" %>
+              <%= text_field_tag :email, nil, class: "form-control", placeholder: "Email" %>
+            </div>
+            <div class="form-group">
+              <%= label_tag :message, "Message" %>
+              <%= text_area_tag :message, nil, class: "form-control", placeholder: "Mensage" %>
+            </div>
+          </div>
+        </div>
+        <%= submit_tag "Enviar" %>
+        <% end %>
     </div>
   </div>
 </div>

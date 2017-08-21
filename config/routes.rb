@@ -24,6 +24,8 @@ AcademiaRails::Application.routes.draw do
    scope module: 'course' do
     get 'about' => 'pages#about', as: :about
     get 'contact' => 'pages#contact', as: :contact
+    # post 'gracias' => 'pages#gracias', as: :gracias
+    post 'pages/gracias'
     get 'posts' => 'posts#index', as: :posts
     get 'posts/:id' => 'posts#show', as: :post
   end
