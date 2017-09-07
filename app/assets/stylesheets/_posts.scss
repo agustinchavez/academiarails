@@ -84,14 +84,15 @@
 }
 
 #secciones_tags {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Amatic SC', cursive;
   font-weight: bold;
   font-size: 4em;
+  text-align: center;
 }
 
 #post_body {
   margin-top:3em;
-  width: 45em;
+  width: 80%;
   border: .135em solid black;
   padding: 4em;
   background-color:white;
@@ -101,7 +102,6 @@
 .posts.show{
   background-color: #dee0e2;
   width:100%;
-  margin-top:-2em;
 }
 
 .footer {
