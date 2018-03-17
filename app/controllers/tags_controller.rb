@@ -15,11 +15,4 @@ class TagsController < ApplicationController
     redirect_to tags_path
   end
 
-  def description
-  end
-
-  def banner_image_url
-  end
-
-
 end
