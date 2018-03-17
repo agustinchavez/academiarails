@@ -7,7 +7,7 @@
         <div class="col-md-8" id="tagSection">
           <%= link_to tag.name, tag_path(tag) %>
           <!-- <p class="tagDescription"><%= truncate(tag.posts.first.description, length: 200) %></p> -->
-          <p class="tagDescription"><%= truncate(tag.posts ? tag.posts.first.description : "", length: 200) %></p>
+          <!-- <p class="tagDescription"><%= truncate(tag.posts ? tag.posts.first.description : "", length: 200) %></p> -->
           <div class="col-mid-2" id="tagImageDiv"><img class="tagImage" src="<%= tag.posts.first.banner_image_url %>"></div>
 
           <% if author_signed_in? %>
