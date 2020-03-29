@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
 
   POR_PAGINA = 5
 
-  scope :most_recent, -> {order(published_at: :desc)}
+  scope :most_recent, -> {order(published_at: :asc)}
   scope :published, -> {where(published: true)}
   scope :recent_paginated, -> (page) {most_recent.paginate(page: page, per_page: POR_PAGINA)}
   scope :with_tag, -> (tag) {tagged_with(tag) if tag.present? }
