@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
-ruby "2.3.7"
-gem 'rails'
+ruby "2.7.0"
+gem 'rails', '~> 4.2.3'
 
 group :assets do
   gem 'sass-rails'
@@ -14,7 +14,7 @@ gem "email_spec", :group => :test
 gem "cucumber-rails", :group => :test
 gem "launchy", :group => :test
 gem "capybara", :group => :test
-gem "factory_girl_rails", :group => [:development, :test]
+gem "factory_bot_rails", :group => [:development, :test]
 # gem "teaspoon", :group => [:development, :test]
 gem "bootstrap-sass"
 gem "devise"
@@ -46,10 +46,12 @@ gem 'turbolinks'
 gem 'will_paginate', '~> 3.1.0'
 gem 'acts-as-taggable-on', '~> 4.0'
 
+gem 'bigdecimal', '1.4.2'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.0'
 end
 
 group :production do

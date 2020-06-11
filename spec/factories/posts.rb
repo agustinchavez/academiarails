@@ -1,8 +1,8 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :post do
-    title "MyString"
-    body "MyText"
-    description "MyText"
-    slug "MyString"
+    title {"MyString"}
+    body {"MyText"}
+    description {"MyText"}
+    slug {"MyString"}
   end
 end

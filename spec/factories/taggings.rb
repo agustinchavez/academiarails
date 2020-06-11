@@ -1,6 +1,6 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :tagging do
-    tag ""
+    tag {""}
     post nil
   end
 end

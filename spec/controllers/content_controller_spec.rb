@@ -3,7 +3,7 @@ require 'spec_helper'
 describe ContentController do
 
   before (:each) do
-    @user = FactoryGirl.create(:user)
+    @user = FactoryBot.create(:user)
     sign_in @user
     @user.add_role :silver # gives the user a role. tests pass regardless of role
   end

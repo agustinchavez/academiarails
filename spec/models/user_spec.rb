@@ -114,9 +114,9 @@ describe User do
 
   describe "#update_plan" do
     before do
-      @user = FactoryGirl.create(:user, email: "test@example.com")
-      @role1 = FactoryGirl.create(:role, name: "silver")
-      @role2 = FactoryGirl.create(:role, name: "gold")
+      @user = FactoryBot.create(:user, email: "test@example.com")
+      @role1 = FactoryBot.create(:role, name: "silver")
+      @role2 = FactoryBot.create(:role, name: "gold")
       @user.add_role(@role1.name)
     end
 
@@ -146,7 +146,7 @@ describe User do
   describe "getting data from the Stripe API" do
 
     before do
-      @user = FactoryGirl.create(:user, email: "test@example.com")
+      @user = FactoryBot.create(:user, email: "test@example.com")
       @api_response = double("api_response", id: "12345",
         cards: double("cards", data: [ {"last4" => "4242"}]))
       @user.update_with_stripe_data(@api_response)
