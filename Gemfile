@@ -48,12 +48,11 @@ gem 'acts-as-taggable-on', '~> 4.0'
 
 gem 'bigdecimal', '1.4.2'
 
-gem 'rails_12factor', group: :production
-
 group :development, :test do
   gem 'sqlite3', '~> 1.3.0'
 end
 
 group :production do
-  gem 'pg', '~> 1.0.0'
+  gem 'pg', '~> 0.20'
+  gem 'rails_12factor'
 end
