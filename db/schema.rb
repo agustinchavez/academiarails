@@ -45,21 +45,8 @@ ActiveRecord::Schema.define(version: 20170807151240) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "body"
-    t.text     "description"
-    t.string   "slug"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.string   "banner_image_url"
-    t.integer  "author_id"
-    t.boolean  "published",        default: false
-    t.datetime "published_at"
-  end
-
-  add_index "posts", ["author_id"], name: "index_posts_on_author_id"
-  add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true
+# Could not dump table "posts" because of following FrozenError
+#   can't modify frozen String: "false"
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
