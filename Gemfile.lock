@@ -305,7 +305,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   nokogiri
-  pg (~> 0.20)
+  pg (~> 0.18)
   protected_attributes
   quiet_assets
   rails (~> 4.2.3)
