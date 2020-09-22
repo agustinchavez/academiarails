@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  before_action :authenticate_user_or_author!
+  # before_action :authenticate_user_or_author!
 
   def index
     @tags = Tag.all

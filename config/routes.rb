@@ -11,7 +11,6 @@ AcademiaRails::Application.routes.draw do
   # authenticated :user do
   #   root :to => 'home#index'
   # end
-  root :to => "tags#index"
 
   namespace :authors do
     resources :posts do
@@ -29,6 +28,8 @@ AcademiaRails::Application.routes.draw do
     get 'posts' => 'posts#index', as: :posts
     get 'posts/:id' => 'posts#show', as: :post
   end
+
+  root :to => "tags#index"
 
 
   devise_for :authors, :users, :controllers => { :registrations => 'registrations' }
