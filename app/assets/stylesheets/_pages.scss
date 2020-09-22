@@ -5,6 +5,7 @@
   position: relative;
   height: 550px;
 }
+
 #aboutBannerTitle {
   color: white;
   text-shadow:
@@ -33,5 +34,17 @@
 
 #contenido p {
   padding: .75%;
+}
 
+.welcomePic {
+  background-image:url("https://res.cloudinary.com/academiarails/image/upload/v1600767935/welcomeOffice_ufyhyq.webp");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  height: 550px;
+}
+
+#welcomeMessage {
+  color: white;
+  font-size: 4em;
 }
