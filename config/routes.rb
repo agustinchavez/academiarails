@@ -29,7 +29,7 @@ AcademiaRails::Application.routes.draw do
     get 'welcome' => 'pages#welcome', as: :welcome
   end
 
-  root :to => "tags#index"
+  root :to => "course/pages#welcome"
 
 
   devise_for :authors, :users, :controllers => { :registrations => 'registrations' }

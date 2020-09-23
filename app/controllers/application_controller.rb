@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   rescue_from AuthorizationException do
-    render text: "Access Denied", status: :unauthorized
+    redirect_to new_user_session_path
   end
 
   protected
@@ -16,5 +16,6 @@ class ApplicationController < ActionController::Base
       raise AuthorizationException.new
     end
   end
+
 
 end
