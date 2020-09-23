@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= yield(:page_title)%> | AcademiaRails</title>
+    <title><%= yield(:page_title)%>AcademiaRails</title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Stripe Membership Saas" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -14,5 +14,6 @@
     <div class="container <%= controller_name %> <%= action_name %>">
       <%= yield %>
     </div>
+
   </body>
 </html>

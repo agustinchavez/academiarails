@@ -21,9 +21,16 @@
   padding: 0;
 }
 
+.welcome {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
 #contenido {
   padding-top: 7%;
   padding-bottom: 6%;
+  color:white;
 }
 
 #aboutBannerTitle {
@@ -37,14 +44,113 @@
 }
 
 .welcomePic {
-  background-image:url("https://res.cloudinary.com/academiarails/image/upload/v1600767935/welcomeOffice_ufyhyq.webp");
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/academiarails/image/upload/v1600861514/welcomeBridge_mi9xkh.jpg");
   background-size: cover;
   background-position: center center;
   position: relative;
   height: 550px;
+  margin-top: -2em;
 }
 
 #welcomeMessage {
+  color:white;
+  padding-top: 10%;
+  padding-left: 10%;
+  display: block;
+  font-weight: bold;
+  font-size: 3.5em;
+}
+
+#welcomeId{
+  color:white;
+  padding-left: 10%;
+  display: block;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#contenido2 {
+  text-align: center;
   color: white;
-  font-size: 4em;
+  font-size: 1.2em;
+}
+
+.container-fluid {
+  background-color: #406D84;
+}
+
+.lead {
+  margin-top: 5%;
+  font-family: DINPro-Cond,Helvetica,Arial,sans-serif;
+  line-height: 1.15;
+  margin-bottom: 15px;
+  font-size: 2em;
+  font-weight: bold;
+  color:white;
+}
+
+#contenido3 {
+  margin-top: 5%;
+  margin-left: 2%;
+  color: white;
+  margin-bottom: 1%;
+}
+
+.flexLearning {
+  font-weight: 100;
+  font-size: 2em;
+}
+
+#flexP {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+#sectionPic {
+  margin-left: 2%;
+  margin-bottom: 5%;
+  display: block;
+  width: 100%;
+  border: 1px solid #406D84;
+}
+
+.welcomeFacts{
+  margin-top: 0%;
+  font-size: 2.15em;
+  color:white;
+}
+
+#welcomeFactsP {
+  color: white;
+  font-size: 1.15em;
+  font-weight: 100;
+}
+
+.projectBased {
+  margin-top: 5%;
+  font-size: 2.75em;
+  color:white;
+  font-weight: 100;
+}
+
+.finish {
+  color:white;
+  font-size: 2.75em;
+  margin-bottom: 8%;
+  font-weight: bold;
+}
+
+#coursePic {
+  margin-top: 25%;
+  margin-left: 2%;
+  margin-bottom: 5%;
+  display: block;
+  width: 90%;
+  border: 1px solid #406D84;
+  border-radius: 5%;
+}
+
+.fixed-bottom{
+  margin-top: 10%;
+  color: #dee0e2;
 }
